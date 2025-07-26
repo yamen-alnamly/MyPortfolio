@@ -1,0 +1,284 @@
+:root {
+    --black: rgb(43, 43, 43);
+    --darkGray: rgb(48, 47, 47);
+    --white: rgb(255, 255, 255);
+    --PageTint: rgb(29, 126, 88) ;
+}
+
+.light {
+    --linkBg: var(--darkGray);
+    --bg: var(--white);
+    --textColor: var(--black);
+    --blackwhite: var(--black);
+    --textColorAlt: var(--white);
+    --TitleTextFont: 50px;
+
+}
+
+.dark {
+    --linkBg: var(--white);
+    --bg: var(--darkGray);
+    --blackwhite: var(--white);
+    --textColor: var(--white);
+    --textColorAlt: var(--black);
+    --TitleTextFont: 50px;
+
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+
+    background-color: var(--bg);
+    color: var(--textColor);
+    transition: 300ms;
+}
+.ImportantWord
+{
+    font-weight: 600;
+    color: rgb(136, 135, 135);
+    
+}
+.portfolioPage {
+    cursor: pointer;
+    font-size: 26px;
+}
+
+.portfolioPages {
+    display: flex;
+    margin: 20px 0 30px;
+    width: 100%;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Main {
+    z-index: 0;
+    opacity: 0;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+}
+.Main .MainImage 
+{   padding: 5px;
+    border-style: outset;
+    border: 4px dashed var(--PageTint);
+}
+.Main .MainText
+{
+    font-size: 36px;
+    font-weight: 600;
+    
+   align-self: center;
+    width: 60%;
+    margin: 50px auto 0;
+}
+
+
+
+/* about me section */
+.AboutMe {
+    z-index: 0;
+    opacity: 0;
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    margin: 60px auto 0;
+    transition: 600ms;
+}
+.AboutMePersonal
+{
+  width: 45%;
+  font-size: 31px;
+  text-align: left;
+}
+.AboutMeBorder
+{
+    height: 65vh;
+    width: 3px;
+    background-color: var(--PageTint);
+}
+.AboutMeSkills
+{
+    display: flex;
+    justify-content: start;
+    align-self: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 48%;
+}
+.AboutMeSkills > h1
+ {
+   width: 100%;
+   text-indent: 10px;
+ }
+.Skills
+{
+    margin: 10px;
+    width: 80px;
+    height: 22px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px;
+    text-align: center;
+    background-color: var(--PageTint);
+    color: white;
+}
+
+
+
+/* projects section  */
+
+.Projects {
+    z-index: 0;
+    opacity: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+.cardLink
+{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1000px; 
+    margin: 0 auto;
+user-select: none;
+text-decoration: none;
+color: var(--textColor);
+
+}
+
+.cardParagraph
+{
+    margin: 30px 0 0px ;
+    width:90%;
+    font-size: 19px;
+    font-weight: 700;
+    text-align: center;
+}
+.cardList
+{
+    list-style: none;
+}
+
+
+/*  contacts section */
+.Contact {
+    z-index: 0;
+    opacity: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 10px auto ;
+    flex-direction: column;
+}
+.ContactLinks
+{
+     background-color: var(--linkBg);
+     display: flex;
+     width: 40%;
+     padding: 15px 20px;
+     margin: 0 auto;
+     justify-content: space-evenly;
+     border-radius: 15px;
+     transition: 300ms;
+}
+.ContactLink
+{
+    background-color: var(--PageTint);
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    transition: 500ms;
+}
+.ContactLink:hover
+{
+    transform: translatey(-10px);
+}
+.ContactMe h1
+{
+  font-size: 30px;
+  text-align: center;
+}
+.ContactModel form 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+align-items: center;
+gap: 10px;
+}
+.ContactModel form input 
+{
+    width: 37vw;
+    height: 20px;
+    padding: 5px;
+    border: var(--PageTint) solid 2px;
+}
+.ContactModel form input::placeholder
+{
+    color: var(--PageTint);
+}
+textarea
+{
+    width: 37.4vw;
+    height: 25vh;
+    padding: 0px 4px ;
+   font-size: 16px;
+   border: var(--PageTint) solid 2px;
+   resize: none;
+}
+
+form button 
+{
+    cursor: pointer;
+    width: 100px;
+    padding: 5px 15px;
+    background-color: transparent;
+    border: var(--PageTint) solid 2px;
+    color: var(--textColor);
+    font-weight: 700;
+}
+.active {
+    z-index: 100;
+    opacity: 1;
+    display: flex;
+    transition: 500ms;
+}
+
+.hidden {
+    opacity: 0;
+    z-index: 0;
+    display: none;
+    
+}
+
+.ThemeButton {
+    position: relative;
+    z-index: 100;
+    transition: 300ms;
+
+}
+
+.ThemeButton img {
+    position: absolute;
+    top: -10px;
+}
+.swiper-button-next, .swiper-button-prev
+{
+    color:var(--PageTint);
+}
