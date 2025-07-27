@@ -2,7 +2,8 @@
     --black: rgb(43, 43, 43);
     --darkGray: rgb(48, 47, 47);
     --white: rgb(255, 255, 255);
-    --PageTint: rgb(29, 126, 88) ;
+    --PageTint: rgb(29, 126, 88);
+    --gray: rgb(122, 122, 122);
 }
 
 .light {
@@ -12,7 +13,7 @@
     --blackwhite: var(--black);
     --textColorAlt: var(--white);
     --TitleTextFont: 50px;
-
+    --shadow: var(--gray)
 }
 
 .dark {
@@ -22,7 +23,7 @@
     --textColor: var(--white);
     --textColorAlt: var(--black);
     --TitleTextFont: 50px;
-
+    --shadow: var(--white)
 }
 
 body {
@@ -33,12 +34,13 @@ body {
     color: var(--textColor);
     transition: 300ms;
 }
-.ImportantWord
-{
+
+.ImportantWord {
     font-weight: 600;
     color: rgb(136, 135, 135);
-    
+
 }
+
 .portfolioPage {
     cursor: pointer;
     font-size: 26px;
@@ -65,17 +67,21 @@ body {
     height: 100%;
     margin: 0 auto;
 }
-.Main .MainImage 
-{   padding: 5px;
+
+.Main .MainImage {
+    padding: 5px;
     border-style: outset;
     border: 4px dashed var(--PageTint);
 }
-.Main .MainText
-{
+.Main div.MainArrow {
+    font-size: 55px;
+}
+
+.Main .MainText {
     font-size: 36px;
     font-weight: 600;
-    
-   align-self: center;
+
+    align-self: center;
     width: 60%;
     margin: 50px auto 0;
 }
@@ -94,20 +100,20 @@ body {
     margin: 60px auto 0;
     transition: 600ms;
 }
-.AboutMePersonal
-{
-  width: 45%;
-  font-size: 31px;
-  text-align: left;
+
+.AboutMePersonal {
+    width: 45%;
+    font-size: 31px;
+    text-align: left;
 }
-.AboutMeBorder
-{
+
+.AboutMeBorder {
     height: 65vh;
     width: 3px;
     background-color: var(--PageTint);
 }
-.AboutMeSkills
-{
+
+.AboutMeSkills {
     display: flex;
     justify-content: start;
     align-self: center;
@@ -115,13 +121,13 @@ body {
     flex-wrap: wrap;
     width: 48%;
 }
-.AboutMeSkills > h1
- {
-   width: 100%;
-   text-indent: 10px;
- }
-.Skills
-{
+
+.AboutMeSkills>h1 {
+    width: 100%;
+    text-indent: 10px;
+}
+
+.Skills {
     margin: 10px;
     width: 80px;
     height: 22px;
@@ -146,33 +152,34 @@ body {
     width: 100%;
     margin: 0 auto;
 }
-.cardLink
-{
-    
+
+.cardLink {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 1000px; 
-    margin: 0 auto;
-user-select: none;
-text-decoration: none;
-color: var(--textColor);
+    width: 80%;
+    margin: -10px auto 10px;
+    padding: 30px 0;
+    user-select: none;
+    text-decoration: none;
+    color: var(--textColor);
 
 }
 
-.cardParagraph
-{
-    margin: 30px 0 0px ;
-    width:90%;
-    font-size: 19px;
+.cardParagraph {
+    margin: 20px 0 0px;
+    width: 90%;
+    font-size: 13px;
     font-weight: 700;
     text-align: center;
 }
-.cardList
-{
+
+.cardList {
     list-style: none;
 }
+
 
 
 /*  contacts section */
@@ -183,68 +190,67 @@ color: var(--textColor);
     justify-content: center;
     align-items: center;
     width: 90%;
-    margin: 10px auto ;
+    margin: 10px auto;
     flex-direction: column;
 }
-.ContactLinks
-{
-     background-color: var(--linkBg);
-     display: flex;
-     width: 40%;
-     padding: 15px 20px;
-     margin: 0 auto;
-     justify-content: space-evenly;
-     border-radius: 15px;
-     transition: 300ms;
+
+.ContactLinks {
+    background-color: var(--linkBg);
+    display: flex;
+    width: 80%;
+    padding: 15px 20px;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    transition: 300ms;
 }
-.ContactLink
-{
+
+.ContactLink {
     background-color: var(--PageTint);
     padding: 10px;
     border-radius: 50%;
     color: white;
     transition: 500ms;
 }
-.ContactLink:hover
-{
+
+.ContactLink:hover {
     transform: translatey(-10px);
 }
-.ContactMe h1
-{
-  font-size: 30px;
-  text-align: center;
+
+.ContactMe h1 {
+    font-size: 30px;
+    text-align: center;
 }
-.ContactModel form 
-{
+
+.ContactModel form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-align-items: center;
-gap: 10px;
+    align-items: center;
+    gap: 10px;
 }
-.ContactModel form input 
-{
+
+.ContactModel form input {
     width: 37vw;
     height: 20px;
     padding: 5px;
     border: var(--PageTint) solid 2px;
 }
-.ContactModel form input::placeholder
-{
+
+.ContactModel form input::placeholder {
     color: var(--PageTint);
 }
-textarea
-{
+
+textarea {
     width: 37.4vw;
     height: 25vh;
-    padding: 0px 4px ;
-   font-size: 16px;
-   border: var(--PageTint) solid 2px;
-   resize: none;
+    padding: 0px 4px;
+    font-size: 16px;
+    border: var(--PageTint) solid 2px;
+    resize: none;
 }
 
-form button 
-{
+form button {
     cursor: pointer;
     width: 100px;
     padding: 5px 15px;
@@ -253,6 +259,7 @@ form button
     color: var(--textColor);
     font-weight: 700;
 }
+
 .active {
     z-index: 100;
     opacity: 1;
@@ -264,7 +271,7 @@ form button
     opacity: 0;
     z-index: 0;
     display: none;
-    
+
 }
 
 .ThemeButton {
@@ -278,7 +285,162 @@ form button
     position: absolute;
     top: -10px;
 }
-.swiper-button-next, .swiper-button-prev
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--PageTint);
+}
+
+
+
+@media (max-width : 1115px) {
+    .AboutMe {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 30px auto;
+    }
+
+    .AboutMeBorder {
+        height: 3px;
+        width: 70vw;
+        background-color: var(--PageTint);
+        margin: 30px;
+    }
+    .AboutMePersonal {
+        width: 80%;
+        font-size: 20px;
+        text-align: center;
+    }
+    .AboutMeSkills {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80%;
+     
+    }
+    .cardLink {
+transform: scale(0.8);
+padding: 20px 0;
+     
+    }
+    
+    .cardParagraph {
+      
+        font-size: 16px;
+        font-weight: 800;
+        
+    }
+    
+   
+}
+
+@media (max-width: 890px)
 {
-    color:var(--PageTint);
+    .Main .MainText  {
+        font-size: 26px;
+        font-weight: 600;
+   padding: 20px;
+   transform: scale(0.7);
+       min-width: 300px;
+        margin: 50px auto 0;
+        position: absolute;
+        background-color: white;
+        border: var(--PageTint) 1px solid;
+        right: 10px;
+        bottom: 10px;
+        color: black;
+    }
+    .Main div.MainArrow {
+        font-size: 33px;
+    }
+    .ContactLinks{
+        width: 80%;
+    }
+    .ContactModel form input
+    {
+        width: 75vw;
+    }
+    textarea {
+        width: 75.4vw;}
+        .cardLink {
+            transform: scale(0.8);
+padding: 30px 0 0 ;
+                 
+                }
+                
+                .cardParagraph {
+                  
+                    font-size: 18px;
+                    font-weight: 800;
+                    
+                }
+                
+               
+}
+@media (max-width:709px)
+{
+    .cardLink {
+        transform: scale(0.6);
+padding: 20px 0  0 ;
+             
+            }
+            
+            .cardParagraph {
+              
+                width: 110%;
+                font-size: 18px;
+                font-weight: 800;
+                
+            } 
+}
+    @media (max-width:609px) {
+        .portfolioPage {
+            cursor: pointer;
+            font-size: 17px;
+        }
+        
+        .portfolioPages {
+            display: flex;
+            margin: 20px 0 30px;
+            width: 100%;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+        
+        }
+        .ContactModel form
+        {
+            gap: 20px;
+        }
+        form button 
+        {
+            width: 200px;
+            padding: 10px;
+        }
+    }
+
+@media (max-width: 512px)
+{
+  .Main .MainText{
+    width: 70%;
+    bottom: -50px;
+    right: -30px;
+  }
+  .cardLink {
+    transform: scale(0.5);
+padding: 30px 0 0 ;
+margin-bottom: -20px;
+         
+        }
+        
+        .cardParagraph {
+          
+            width: 160%;
+            font-size: 21px;
+            font-weight: 800;
+            
+        }
 }
